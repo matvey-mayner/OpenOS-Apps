@@ -19,7 +19,7 @@ gpu.setForeground(0xFFFFFF)
 gpu.fill(1, 1, 80, 25, " ")
 
 local seconds = 300
-local startTime = computer.uptime()
+local startTime = comp.uptime()
 
 os.sleep(0.3)
 gpu.set(1, 1, "░░▄▀▀▀▀▀▄░░")
@@ -49,7 +49,7 @@ os.sleep(0.3)
 gpu.set(30, 12, "3. Don't leave this program")
 
 
-while computer.uptime() - startTime < seconds do
+while comp.uptime() - startTime < seconds do
 
 end
 
