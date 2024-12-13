@@ -6,6 +6,7 @@ gpu.setResolution(80, 25)
 
 gpu.setBackground(0x000000)
 gpu.setForeground(0xFFFFFF)
+gpu.fill(1, 1, 80, 25, " ")
 
 gpu.set(35, 1, "You so stupid!")
 gpu.setForeground(0x960a00)
