@@ -21,14 +21,19 @@ gpu.set(10, 7, "⠀⠀⠀  ⠀⠀⠀")
 gpu.set(10, 8, "⠀⠀⠀⠈⠁⠀⠀⠀")
 
 while true do
-  computer.beep(0.1, 0.1)
-  computer.beep(0.1, 0.1)
-  computer.beep(0.1, 0.1)
   gpu.set(10, 3, "⠀⢀⣠⣤⣤⣄⡀⠀")
   gpu.set(10, 4, "⣿⣿⣿⣿⣿⣿⣿⣿")
   gpu.set(10, 5, "⣇⠈⠉⡿⢿⠉⠁⢸")
   gpu.set(10, 6, "⠙⠛⢻⣷⣾⡟⠛⠋")
   gpu.set(10, 7, "⠀⠀⠀⠈⠁⠀⠀⠀")
+
+  computer.beep(999, 0.1)
+  computer.beep(899, 0.1)
+  computer.beep(100, 0.1)
+  computer.beep(69, 0.1)
+  computer.beep(20, 0.1)
+  computer.beep(11, 0.1)
+  computer.beep(1, 0.1)
   
   gpu.set(10, 3, "⠀⢀⣠⣤⣤⣄⡀⠀")
   gpu.set(10, 4, "⣿⣿⣿⣿⣿⣿⣿⣿")
