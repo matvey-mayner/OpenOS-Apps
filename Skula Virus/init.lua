@@ -6,20 +6,6 @@ gpu.setBackground(0xff0000)
 gpu.setForeground(0xFFFFFF)
 gpu.fill(1, 1, 80, 25, " ")
 
-gpu.set(10, 3, "⠀⢀⣠⣤⣤⣄⡀⠀")
-gpu.set(10, 4, "⣿⣿⣿⣿⣿⣿⣿⣿")
-gpu.set(10, 5, "⣇⠈⠉⡿⢿⠉⠁⢸")
-gpu.set(10, 6, "⠙⠛⢻⣷⣾⡟⠛⠋")
-gpu.set(10, 7, "⠀⠀⠀⠈⠁⠀⠀⠀")
-gpu.set(10, 10, "Your Computer Captured!")
-
-gpu.set(10, 3, "⠀⢀⣠⣤⣤⣄⡀⠀")
-gpu.set(10, 4, "⣿⣿⣿⣿⣿⣿⣿⣿")
-gpu.set(10, 5, "⣇⠈⠉⡿⢿⠉⠁⢸")
-gpu.set(10, 6, "⠙⠛⢻⣷⣾⡟⠛⠋")
-gpu.set(10, 7, "⠀⠀⠀  ⠀⠀⠀")
-gpu.set(10, 8, "⠀⠀⠀⠈⠁⠀⠀⠀")
-
 while true do
   gpu.set(10, 3, "⠀⢀⣠⣤⣤⣄⡀⠀")
   gpu.set(10, 4, "⣿⣿⣿⣿⣿⣿⣿⣿")
@@ -32,8 +18,6 @@ while true do
   computer.beep(100, 0.1)
   computer.beep(69, 0.1)
   computer.beep(20, 0.1)
-  computer.beep(11, 0.1)
-  computer.beep(1, 0.1)
   
   gpu.set(10, 3, "⠀⢀⣠⣤⣤⣄⡀⠀")
   gpu.set(10, 4, "⣿⣿⣿⣿⣿⣿⣿⣿")
