@@ -5,6 +5,7 @@ gpu.setResolution(80, 25)
 gpu.setBackground(0xff0000)
 gpu.setForeground(0xFFFFFF)
 gpu.fill(1, 1, 80, 25, " ")
+gpu.set(1, 10, "Your Computer Captured, By Skula Virus! ")
 
 while true do
   gpu.set(10, 3, "⠀⢀⣠⣤⣤⣄⡀⠀")
